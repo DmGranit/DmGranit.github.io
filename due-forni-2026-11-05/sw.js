@@ -1,5 +1,5 @@
 /* Offline cache for the deck. Everything (images, fonts, calculators) lives inside index.html. */
-const CACHE = 'due-forni-202611032259';
+const CACHE = 'due-forni-202611032304';
 const FILES = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));

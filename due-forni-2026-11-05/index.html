@@ -344,7 +344,7 @@ img{display:block;max-width:100%}
 .canvas .s-intro .dqr b{font-size:17px}
 .canvas .s-intro .dqr span{font-size:13.5px}
 .canvas .contact{grid-template-columns:440px 1fr;gap:50px}
-.canvas .qrs{grid-template-columns:330px 250px;gap:26px;align-items:center;justify-items:stretch}
+.canvas .qrs{grid-template-columns:330px 250px;gap:26px;align-items:end;justify-items:stretch}
 .canvas .qrs .qr{padding-top:0}
 .canvas .qrs .qr img{width:330px}
 .canvas .qrs .dqr{flex-direction:column;text-align:center;padding:16px 14px;gap:10px}
@@ -352,6 +352,7 @@ img{display:block;max-width:100%}
 .canvas .qrs .dqr b{font-size:16px}
 @media (min-width:700px){.js:not(.canvas) .qrs{grid-template-columns:1fr}.js:not(.canvas) .dqr img{width:170px;height:170px}.js:not(.canvas) .dqr b{font-size:19px}}
 @media print{.dqr a{color:var(--gold)}}
+.canvas .qrs .dqr{margin-bottom:18px} /* Olga's card image carries ~18px of transparent shadow below the white card */
 </style>
 </head>
 <body>
