@@ -396,6 +396,26 @@ img{display:block;max-width:100%}
 .js .nojs-bar{display:none}
 @media print{.nojs-bar{display:none}}
 .cov-cap .hint{display:none}.js .cov-cap .hint{display:block}
+
+/* calculator v2: one input (glass price), economics per bottle */
+.etab.econ td{font-size:16px;padding:10px 0}
+.etab.econ tr.gp td{font-size:18px}
+.etab.econ tr.gp2 td{font-weight:700;font-size:16px}
+.etab.econ caption{font-size:12px;padding-bottom:10px}
+.canvas .s-calc .cgrid{grid-template-columns:1fr 1fr}
+.canvas .s-calc .ctab td{padding:20px 0;font-size:17px}
+.canvas .s-calc .ctab .big{font-size:21px}
+.canvas .s-calc .ccard{padding:12px 22px 14px}
+.canvas .etab.econ caption{font-size:13px;padding:12px 0 12px}
+.canvas .etab.econ td{font-size:18px;padding:15px 0}
+.canvas .etab.econ tr.gp td{font-size:21px}
+.canvas .etab.econ tr.gp2 td{font-size:18px}
+@media (min-width:700px){.js:not(.canvas) .etab.econ td{font-size:19px;padding:13px 0}.js:not(.canvas) .etab.econ tr.gp td{font-size:21px}}
+.canvas .s-calc .cgrid{grid-template-columns:574px 1fr}
+.canvas .s-calc .ctab th{white-space:nowrap}
+.canvas .s-calc .ctab td.lab{width:215px}
+.canvas .s-calc .ctab td.cin{width:190px}
+.canvas .etab.econ tr.gp td{font-size:19px}.canvas .etab.econ td:first-child{white-space:nowrap}
 </style>
 </head>
 <body>
@@ -450,39 +470,33 @@ img{display:block;max-width:100%}
 </div></div></div><div class="foot"><span>ABRAU PREMIUM</span><span class="num">06</span></div></div></section><section class="slide s-calc" aria-roledescription="слайд" aria-label="7 из 18: Калькулятор: Абрау-Дюрсо Шардоне 2025"><div class="slide-inner"><div class="pad">
 <div class="kicker">Бокальный калькулятор · Тихие вина</div>
 <h2 class="ttl">Экономика бокальной продажи</h2>
-<p class="sub" data-sub>Иллюстративный расчёт для 120&nbsp;мл, 6 бокалов из бутылки 0,75&nbsp;л</p>
-<div class="nojs-note">В этом предпросмотре калькулятор не работает.<a class="nojs-btn" href="https://dmgranit.github.io/due-forni-2026-11-05/#7">Открыть калькулятор ›</a><b>Абрау-Дюрсо Шардоне 2025</b>: прайс 1 200,72 ₽, себестоимость бокала 120&nbsp;мл — 200,12 ₽.</div>
+<p class="sub">Расчёт для бокала 125&nbsp;мл: 6 бокалов из бутылки 0,75&nbsp;л</p>
+<div class="nojs-note">В этом предпросмотре калькулятор не работает.<a class="nojs-btn" href="https://dmgranit.github.io/due-forni-2026-11-05/#7">Открыть калькулятор ›</a><b>Абрау-Дюрсо Шардоне 2025</b>: прайс 1 200,72 ₽, себестоимость бокала 125&nbsp;мл — 200,12 ₽.</div>
 <div class="calc-ui calc" data-price="1200.72" data-key="chardonnay">
 <div class="calc-wrap"><div>
 <div class="cwine"><img data-from="5" alt="" decoding="async"><div><h3>Абрау-Дюрсо Шардоне 2025</h3><p>Тихое белое · сухое · ЗНМП</p></div></div>
 <div class="cgrid">
-<div class="ccard">
-<table class="ctab"><thead><tr><th>Условие</th><th>Закупка / бут.</th><th class="r">Себест. / бокал <span class="num"><span data-o="vol">120</span>&nbsp;мл</span></th></tr></thead>
+<div class="ccard cin-card">
+<table class="ctab"><thead><tr><th>Условие</th><th>Закупка / бут.</th><th class="r">Себест. / бокал 125&nbsp;мл</th></tr></thead>
 <tbody>
-<tr class="t-price"><td class="lab">Текущий прайс</td><td class="big num" data-h="Закупка / бут.">1 200,72 ₽</td><td class="r big num" data-h="Себест. / бокал" data-o="cost"></td></tr>
-<tr class="t-vol"><td class="lab">Объём бокала</td><td colspan="2"><div class="chips" role="group" aria-label="Объём бокала"><button type="button" data-v="100">100 мл</button><button type="button" data-v="120">120 мл</button><button type="button" data-v="125">125 мл</button><button type="button" data-v="150">150 мл</button></div><div class="hint" data-o="gl" style="margin-top:5px"></div></td></tr>
+<tr class="t-price"><td class="lab">Текущий прайс</td><td class="big num" data-h="Закупка / бут.">1 200,72 ₽</td><td class="r big num" data-h="Себест. / бокал 125 мл" data-o="cost">200,12 ₽</td></tr>
 <tr class="t-in"><td class="lab">Цена бокала в карте, ₽<small>на выбор — можно установить</small></td><td class="cin"><div class="stp"><button type="button" data-f="menu" data-step="-50" aria-label="Уменьшить: Цена бокала в карте, рублей">−</button><div class="in"><input data-in="menu" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" enterkeyhint="done" aria-label="Цена бокала в карте, рублей"><span class="u">₽</span></div><button type="button" data-f="menu" data-step="50" aria-label="Увеличить: Цена бокала в карте, рублей">+</button></div></td><td class="r"><button type="button" class="hint lnkb" data-o="reset" hidden style="border:0;background:none;padding:0;text-decoration:underline;cursor:pointer">сбросить</button></td></tr>
 <tr class="t-kost"><td class="lab">Кост, %<small>считает калькулятор</small></td><td class="big num" data-o="kost"></td><td class="r hint">себест. бокала / цена в карте</td></tr>
-<tr class="t-in"><td class="lab">Сценарий продаж 1<small>кол-во бут. в мес.</small></td><td class="cin"><div class="stp"><button type="button" data-f="b1" data-step="-1" aria-label="Уменьшить: Сценарий 1, бутылок в месяц">−</button><div class="in"><input data-in="b1" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" enterkeyhint="done" aria-label="Сценарий 1, бутылок в месяц"><span class="u">бут.</span></div><button type="button" data-f="b1" data-step="1" aria-label="Увеличить: Сценарий 1, бутылок в месяц">+</button></div></td><td class="r hint num" data-o="g1"></td></tr>
-<tr class="t-in"><td class="lab">Сценарий продаж 2<small>кол-во бут. в мес.</small></td><td class="cin"><div class="stp"><button type="button" data-f="b2" data-step="-1" aria-label="Уменьшить: Сценарий 2, бутылок в месяц">−</button><div class="in"><input data-in="b2" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" enterkeyhint="done" aria-label="Сценарий 2, бутылок в месяц"><span class="u">бут.</span></div><button type="button" data-f="b2" data-step="1" aria-label="Увеличить: Сценарий 2, бутылок в месяц">+</button></div></td><td class="r hint num" data-o="g2"></td></tr>
 </tbody></table>
 </div>
 <div class="ccard cres">
-<div class="kpis"><div class="kpi hl"><span>Прибыль с бокала</span><b class="num" data-o="gp"></b><small>цена в карте − себестоимость</small></div><div class="kpi"><span>Прибыль с бутылки</span><b class="num" data-o="gpb"></b><small data-o="gpbs">6 бокалов</small></div></div>
-<table class="etab"><caption>Сценарий экономики винной карты</caption>
-<thead><tr><th>в месяц</th><th>Сценарий 1</th><th>Сценарий 2</th></tr></thead>
+<table class="etab econ"><caption>Экономика при цене бокала <span class="num" data-o="m"></span></caption>
 <tbody>
-<tr><td>Бутылок</td><td class="num" data-e="b1"></td><td class="num" data-e="b2"></td></tr>
-<tr><td>Бокалов</td><td class="num" data-e="gl1"></td><td class="num" data-e="gl2"></td></tr>
-<tr><td>Выручка по карте</td><td class="num" data-e="rev1"></td><td class="num" data-e="rev2"></td></tr>
-<tr><td>Закупка по прайсу</td><td class="num" data-e="buy1"></td><td class="num" data-e="buy2"></td></tr>
-<tr class="gp"><td>Валовая прибыль</td><td class="num" data-e="gp1"></td><td class="num" data-e="gp2"></td></tr>
-<tr class="yr"><td>То же за 12 месяцев</td><td class="num" data-e="yr1"></td><td class="num" data-e="yr2"></td></tr>
+<tr><td>Бокалов из бутылки 0,75 л</td><td class="num">6</td></tr>
+<tr><td>Выручка с бутылки</td><td class="num" data-o="rev"></td></tr>
+<tr><td>Закупка бутылки по прайсу</td><td class="num">1 200,72 ₽</td></tr>
+<tr class="gp"><td>Валовая прибыль с бутылки</td><td class="num" data-o="gpb"></td></tr>
+<tr class="gp2"><td>Валовая прибыль с бокала</td><td class="num" data-o="gp"></td></tr>
 </tbody></table>
 <p class="cnote"><b>Формула:</b> цена закупки бутылки / количество бокалов. Пример без учёта потерь, сервиса и прочих расходов ресторана.</p>
 </div>
 </div>
-<div class="mini" aria-hidden="true"><div>Себест. бокала<b class="num" data-k="cost"></b></div><div>Кост<b class="num" data-k="kost"></b></div><div>Прибыль · сц.&nbsp;1<b class="num" data-k="gp"></b></div></div>
+<div class="mini" aria-hidden="true"><div>Себест. бокала<b class="num" data-k="cost"></b></div><div>Кост<b class="num" data-k="kost"></b></div><div>Прибыль с бутылки<b class="num" data-k="gpb"></b></div></div>
 </div>
 <aside class="cside"><img data-from="5" alt="Абрау-Дюрсо Шардоне 2025" decoding="async"><h3>Абрау-Дюрсо Шардоне 2025</h3><p class="num">Прайс 1 200,72 ₽</p></aside>
 </div></div></div><div class="foot"><span>ABRAU PREMIUM</span><span class="num">07</span></div></div></section><section class="slide s-wine" aria-roledescription="слайд" aria-label="8 из 18: Абрау-Дюрсо Рислинг"><div class="slide-inner"><div class="pad"><div class="wine">
@@ -497,39 +511,33 @@ img{display:block;max-width:100%}
 </div></div></div><div class="foot"><span>ABRAU PREMIUM</span><span class="num">08</span></div></div></section><section class="slide s-calc" aria-roledescription="слайд" aria-label="9 из 18: Калькулятор: Абрау-Дюрсо Рислинг 2025"><div class="slide-inner"><div class="pad">
 <div class="kicker">Бокальный калькулятор · Тихие вина</div>
 <h2 class="ttl">Экономика бокальной продажи</h2>
-<p class="sub" data-sub>Иллюстративный расчёт для 120&nbsp;мл, 6 бокалов из бутылки 0,75&nbsp;л</p>
-<div class="nojs-note">В этом предпросмотре калькулятор не работает.<a class="nojs-btn" href="https://dmgranit.github.io/due-forni-2026-11-05/#9">Открыть калькулятор ›</a><b>Абрау-Дюрсо Рислинг 2025</b>: прайс 1 565,23 ₽, себестоимость бокала 120&nbsp;мл — 260,87 ₽.</div>
+<p class="sub">Расчёт для бокала 125&nbsp;мл: 6 бокалов из бутылки 0,75&nbsp;л</p>
+<div class="nojs-note">В этом предпросмотре калькулятор не работает.<a class="nojs-btn" href="https://dmgranit.github.io/due-forni-2026-11-05/#9">Открыть калькулятор ›</a><b>Абрау-Дюрсо Рислинг 2025</b>: прайс 1 565,23 ₽, себестоимость бокала 125&nbsp;мл — 260,87 ₽.</div>
 <div class="calc-ui calc" data-price="1565.23" data-key="riesling">
 <div class="calc-wrap"><div>
 <div class="cwine"><img data-from="6" alt="" decoding="async"><div><h3>Абрау-Дюрсо Рислинг 2025</h3><p>Тихое белое · сухое · ЗНМП</p></div></div>
 <div class="cgrid">
-<div class="ccard">
-<table class="ctab"><thead><tr><th>Условие</th><th>Закупка / бут.</th><th class="r">Себест. / бокал <span class="num"><span data-o="vol">120</span>&nbsp;мл</span></th></tr></thead>
+<div class="ccard cin-card">
+<table class="ctab"><thead><tr><th>Условие</th><th>Закупка / бут.</th><th class="r">Себест. / бокал 125&nbsp;мл</th></tr></thead>
 <tbody>
-<tr class="t-price"><td class="lab">Текущий прайс</td><td class="big num" data-h="Закупка / бут.">1 565,23 ₽</td><td class="r big num" data-h="Себест. / бокал" data-o="cost"></td></tr>
-<tr class="t-vol"><td class="lab">Объём бокала</td><td colspan="2"><div class="chips" role="group" aria-label="Объём бокала"><button type="button" data-v="100">100 мл</button><button type="button" data-v="120">120 мл</button><button type="button" data-v="125">125 мл</button><button type="button" data-v="150">150 мл</button></div><div class="hint" data-o="gl" style="margin-top:5px"></div></td></tr>
+<tr class="t-price"><td class="lab">Текущий прайс</td><td class="big num" data-h="Закупка / бут.">1 565,23 ₽</td><td class="r big num" data-h="Себест. / бокал 125 мл" data-o="cost">260,87 ₽</td></tr>
 <tr class="t-in"><td class="lab">Цена бокала в карте, ₽<small>на выбор — можно установить</small></td><td class="cin"><div class="stp"><button type="button" data-f="menu" data-step="-50" aria-label="Уменьшить: Цена бокала в карте, рублей">−</button><div class="in"><input data-in="menu" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" enterkeyhint="done" aria-label="Цена бокала в карте, рублей"><span class="u">₽</span></div><button type="button" data-f="menu" data-step="50" aria-label="Увеличить: Цена бокала в карте, рублей">+</button></div></td><td class="r"><button type="button" class="hint lnkb" data-o="reset" hidden style="border:0;background:none;padding:0;text-decoration:underline;cursor:pointer">сбросить</button></td></tr>
 <tr class="t-kost"><td class="lab">Кост, %<small>считает калькулятор</small></td><td class="big num" data-o="kost"></td><td class="r hint">себест. бокала / цена в карте</td></tr>
-<tr class="t-in"><td class="lab">Сценарий продаж 1<small>кол-во бут. в мес.</small></td><td class="cin"><div class="stp"><button type="button" data-f="b1" data-step="-1" aria-label="Уменьшить: Сценарий 1, бутылок в месяц">−</button><div class="in"><input data-in="b1" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" enterkeyhint="done" aria-label="Сценарий 1, бутылок в месяц"><span class="u">бут.</span></div><button type="button" data-f="b1" data-step="1" aria-label="Увеличить: Сценарий 1, бутылок в месяц">+</button></div></td><td class="r hint num" data-o="g1"></td></tr>
-<tr class="t-in"><td class="lab">Сценарий продаж 2<small>кол-во бут. в мес.</small></td><td class="cin"><div class="stp"><button type="button" data-f="b2" data-step="-1" aria-label="Уменьшить: Сценарий 2, бутылок в месяц">−</button><div class="in"><input data-in="b2" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" enterkeyhint="done" aria-label="Сценарий 2, бутылок в месяц"><span class="u">бут.</span></div><button type="button" data-f="b2" data-step="1" aria-label="Увеличить: Сценарий 2, бутылок в месяц">+</button></div></td><td class="r hint num" data-o="g2"></td></tr>
 </tbody></table>
 </div>
 <div class="ccard cres">
-<div class="kpis"><div class="kpi hl"><span>Прибыль с бокала</span><b class="num" data-o="gp"></b><small>цена в карте − себестоимость</small></div><div class="kpi"><span>Прибыль с бутылки</span><b class="num" data-o="gpb"></b><small data-o="gpbs">6 бокалов</small></div></div>
-<table class="etab"><caption>Сценарий экономики винной карты</caption>
-<thead><tr><th>в месяц</th><th>Сценарий 1</th><th>Сценарий 2</th></tr></thead>
+<table class="etab econ"><caption>Экономика при цене бокала <span class="num" data-o="m"></span></caption>
 <tbody>
-<tr><td>Бутылок</td><td class="num" data-e="b1"></td><td class="num" data-e="b2"></td></tr>
-<tr><td>Бокалов</td><td class="num" data-e="gl1"></td><td class="num" data-e="gl2"></td></tr>
-<tr><td>Выручка по карте</td><td class="num" data-e="rev1"></td><td class="num" data-e="rev2"></td></tr>
-<tr><td>Закупка по прайсу</td><td class="num" data-e="buy1"></td><td class="num" data-e="buy2"></td></tr>
-<tr class="gp"><td>Валовая прибыль</td><td class="num" data-e="gp1"></td><td class="num" data-e="gp2"></td></tr>
-<tr class="yr"><td>То же за 12 месяцев</td><td class="num" data-e="yr1"></td><td class="num" data-e="yr2"></td></tr>
+<tr><td>Бокалов из бутылки 0,75 л</td><td class="num">6</td></tr>
+<tr><td>Выручка с бутылки</td><td class="num" data-o="rev"></td></tr>
+<tr><td>Закупка бутылки по прайсу</td><td class="num">1 565,23 ₽</td></tr>
+<tr class="gp"><td>Валовая прибыль с бутылки</td><td class="num" data-o="gpb"></td></tr>
+<tr class="gp2"><td>Валовая прибыль с бокала</td><td class="num" data-o="gp"></td></tr>
 </tbody></table>
 <p class="cnote"><b>Формула:</b> цена закупки бутылки / количество бокалов. Пример без учёта потерь, сервиса и прочих расходов ресторана.</p>
 </div>
 </div>
-<div class="mini" aria-hidden="true"><div>Себест. бокала<b class="num" data-k="cost"></b></div><div>Кост<b class="num" data-k="kost"></b></div><div>Прибыль · сц.&nbsp;1<b class="num" data-k="gp"></b></div></div>
+<div class="mini" aria-hidden="true"><div>Себест. бокала<b class="num" data-k="cost"></b></div><div>Кост<b class="num" data-k="kost"></b></div><div>Прибыль с бутылки<b class="num" data-k="gpb"></b></div></div>
 </div>
 <aside class="cside"><img data-from="6" alt="Абрау-Дюрсо Рислинг 2025" decoding="async"><h3>Абрау-Дюрсо Рислинг 2025</h3><p class="num">Прайс 1 565,23 ₽</p></aside>
 </div></div></div><div class="foot"><span>ABRAU PREMIUM</span><span class="num">09</span></div></div></section><section class="slide s-wine" aria-roledescription="слайд" aria-label="10 из 18: Абрау-Дюрсо Мерло"><div class="slide-inner"><div class="pad"><div class="wine">
@@ -544,39 +552,33 @@ img{display:block;max-width:100%}
 </div></div></div><div class="foot"><span>ABRAU PREMIUM</span><span class="num">10</span></div></div></section><section class="slide s-calc" aria-roledescription="слайд" aria-label="11 из 18: Калькулятор: Абрау-Дюрсо Мерло 2024"><div class="slide-inner"><div class="pad">
 <div class="kicker">Бокальный калькулятор · Тихие вина</div>
 <h2 class="ttl">Экономика бокальной продажи</h2>
-<p class="sub" data-sub>Иллюстративный расчёт для 120&nbsp;мл, 6 бокалов из бутылки 0,75&nbsp;л</p>
-<div class="nojs-note">В этом предпросмотре калькулятор не работает.<a class="nojs-btn" href="https://dmgranit.github.io/due-forni-2026-11-05/#11">Открыть калькулятор ›</a><b>Абрау-Дюрсо Мерло 2024</b>: прайс 1 321,72 ₽, себестоимость бокала 120&nbsp;мл — 220,29 ₽.</div>
+<p class="sub">Расчёт для бокала 125&nbsp;мл: 6 бокалов из бутылки 0,75&nbsp;л</p>
+<div class="nojs-note">В этом предпросмотре калькулятор не работает.<a class="nojs-btn" href="https://dmgranit.github.io/due-forni-2026-11-05/#11">Открыть калькулятор ›</a><b>Абрау-Дюрсо Мерло 2024</b>: прайс 1 321,72 ₽, себестоимость бокала 125&nbsp;мл — 220,29 ₽.</div>
 <div class="calc-ui calc" data-price="1321.72" data-key="merlot">
 <div class="calc-wrap"><div>
 <div class="cwine"><img data-from="7" alt="" decoding="async"><div><h3>Абрау-Дюрсо Мерло 2024</h3><p>Вино красное сухое · ЗГУ «Кубань»</p></div></div>
 <div class="cgrid">
-<div class="ccard">
-<table class="ctab"><thead><tr><th>Условие</th><th>Закупка / бут.</th><th class="r">Себест. / бокал <span class="num"><span data-o="vol">120</span>&nbsp;мл</span></th></tr></thead>
+<div class="ccard cin-card">
+<table class="ctab"><thead><tr><th>Условие</th><th>Закупка / бут.</th><th class="r">Себест. / бокал 125&nbsp;мл</th></tr></thead>
 <tbody>
-<tr class="t-price"><td class="lab">Текущий прайс</td><td class="big num" data-h="Закупка / бут.">1 321,72 ₽</td><td class="r big num" data-h="Себест. / бокал" data-o="cost"></td></tr>
-<tr class="t-vol"><td class="lab">Объём бокала</td><td colspan="2"><div class="chips" role="group" aria-label="Объём бокала"><button type="button" data-v="100">100 мл</button><button type="button" data-v="120">120 мл</button><button type="button" data-v="125">125 мл</button><button type="button" data-v="150">150 мл</button></div><div class="hint" data-o="gl" style="margin-top:5px"></div></td></tr>
+<tr class="t-price"><td class="lab">Текущий прайс</td><td class="big num" data-h="Закупка / бут.">1 321,72 ₽</td><td class="r big num" data-h="Себест. / бокал 125 мл" data-o="cost">220,29 ₽</td></tr>
 <tr class="t-in"><td class="lab">Цена бокала в карте, ₽<small>на выбор — можно установить</small></td><td class="cin"><div class="stp"><button type="button" data-f="menu" data-step="-50" aria-label="Уменьшить: Цена бокала в карте, рублей">−</button><div class="in"><input data-in="menu" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" enterkeyhint="done" aria-label="Цена бокала в карте, рублей"><span class="u">₽</span></div><button type="button" data-f="menu" data-step="50" aria-label="Увеличить: Цена бокала в карте, рублей">+</button></div></td><td class="r"><button type="button" class="hint lnkb" data-o="reset" hidden style="border:0;background:none;padding:0;text-decoration:underline;cursor:pointer">сбросить</button></td></tr>
 <tr class="t-kost"><td class="lab">Кост, %<small>считает калькулятор</small></td><td class="big num" data-o="kost"></td><td class="r hint">себест. бокала / цена в карте</td></tr>
-<tr class="t-in"><td class="lab">Сценарий продаж 1<small>кол-во бут. в мес.</small></td><td class="cin"><div class="stp"><button type="button" data-f="b1" data-step="-1" aria-label="Уменьшить: Сценарий 1, бутылок в месяц">−</button><div class="in"><input data-in="b1" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" enterkeyhint="done" aria-label="Сценарий 1, бутылок в месяц"><span class="u">бут.</span></div><button type="button" data-f="b1" data-step="1" aria-label="Увеличить: Сценарий 1, бутылок в месяц">+</button></div></td><td class="r hint num" data-o="g1"></td></tr>
-<tr class="t-in"><td class="lab">Сценарий продаж 2<small>кол-во бут. в мес.</small></td><td class="cin"><div class="stp"><button type="button" data-f="b2" data-step="-1" aria-label="Уменьшить: Сценарий 2, бутылок в месяц">−</button><div class="in"><input data-in="b2" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" enterkeyhint="done" aria-label="Сценарий 2, бутылок в месяц"><span class="u">бут.</span></div><button type="button" data-f="b2" data-step="1" aria-label="Увеличить: Сценарий 2, бутылок в месяц">+</button></div></td><td class="r hint num" data-o="g2"></td></tr>
 </tbody></table>
 </div>
 <div class="ccard cres">
-<div class="kpis"><div class="kpi hl"><span>Прибыль с бокала</span><b class="num" data-o="gp"></b><small>цена в карте − себестоимость</small></div><div class="kpi"><span>Прибыль с бутылки</span><b class="num" data-o="gpb"></b><small data-o="gpbs">6 бокалов</small></div></div>
-<table class="etab"><caption>Сценарий экономики винной карты</caption>
-<thead><tr><th>в месяц</th><th>Сценарий 1</th><th>Сценарий 2</th></tr></thead>
+<table class="etab econ"><caption>Экономика при цене бокала <span class="num" data-o="m"></span></caption>
 <tbody>
-<tr><td>Бутылок</td><td class="num" data-e="b1"></td><td class="num" data-e="b2"></td></tr>
-<tr><td>Бокалов</td><td class="num" data-e="gl1"></td><td class="num" data-e="gl2"></td></tr>
-<tr><td>Выручка по карте</td><td class="num" data-e="rev1"></td><td class="num" data-e="rev2"></td></tr>
-<tr><td>Закупка по прайсу</td><td class="num" data-e="buy1"></td><td class="num" data-e="buy2"></td></tr>
-<tr class="gp"><td>Валовая прибыль</td><td class="num" data-e="gp1"></td><td class="num" data-e="gp2"></td></tr>
-<tr class="yr"><td>То же за 12 месяцев</td><td class="num" data-e="yr1"></td><td class="num" data-e="yr2"></td></tr>
+<tr><td>Бокалов из бутылки 0,75 л</td><td class="num">6</td></tr>
+<tr><td>Выручка с бутылки</td><td class="num" data-o="rev"></td></tr>
+<tr><td>Закупка бутылки по прайсу</td><td class="num">1 321,72 ₽</td></tr>
+<tr class="gp"><td>Валовая прибыль с бутылки</td><td class="num" data-o="gpb"></td></tr>
+<tr class="gp2"><td>Валовая прибыль с бокала</td><td class="num" data-o="gp"></td></tr>
 </tbody></table>
 <p class="cnote"><b>Формула:</b> цена закупки бутылки / количество бокалов. Пример без учёта потерь, сервиса и прочих расходов ресторана.</p>
 </div>
 </div>
-<div class="mini" aria-hidden="true"><div>Себест. бокала<b class="num" data-k="cost"></b></div><div>Кост<b class="num" data-k="kost"></b></div><div>Прибыль · сц.&nbsp;1<b class="num" data-k="gp"></b></div></div>
+<div class="mini" aria-hidden="true"><div>Себест. бокала<b class="num" data-k="cost"></b></div><div>Кост<b class="num" data-k="kost"></b></div><div>Прибыль с бутылки<b class="num" data-k="gpb"></b></div></div>
 </div>
 <aside class="cside"><img data-from="7" alt="Абрау-Дюрсо Мерло 2024" decoding="async"><h3>Абрау-Дюрсо Мерло 2024</h3><p class="num">Прайс 1 321,72 ₽</p></aside>
 </div></div></div><div class="foot"><span>ABRAU PREMIUM</span><span class="num">11</span></div></div></section><section class="slide s-wine" aria-roledescription="слайд" aria-label="12 из 18: Abrau Estates Резерв Каберне Фран"><div class="slide-inner"><div class="pad"><div class="wine">
@@ -591,39 +593,33 @@ img{display:block;max-width:100%}
 </div></div></div><div class="foot"><span>ABRAU PREMIUM</span><span class="num">12</span></div></div></section><section class="slide s-calc" aria-roledescription="слайд" aria-label="13 из 18: Калькулятор: Abrau Estates Резерв Каберне Фран 2023"><div class="slide-inner"><div class="pad">
 <div class="kicker">Бокальный калькулятор · Тихие вина</div>
 <h2 class="ttl">Экономика бокальной продажи</h2>
-<p class="sub" data-sub>Иллюстративный расчёт для 120&nbsp;мл, 6 бокалов из бутылки 0,75&nbsp;л</p>
-<div class="nojs-note">В этом предпросмотре калькулятор не работает.<a class="nojs-btn" href="https://dmgranit.github.io/due-forni-2026-11-05/#13">Открыть калькулятор ›</a><b>Abrau Estates Резерв Каберне Фран 2023</b>: прайс 899,34 ₽, себестоимость бокала 120&nbsp;мл — 149,89 ₽.</div>
+<p class="sub">Расчёт для бокала 125&nbsp;мл: 6 бокалов из бутылки 0,75&nbsp;л</p>
+<div class="nojs-note">В этом предпросмотре калькулятор не работает.<a class="nojs-btn" href="https://dmgranit.github.io/due-forni-2026-11-05/#13">Открыть калькулятор ›</a><b>Abrau Estates Резерв Каберне Фран 2023</b>: прайс 899,34 ₽, себестоимость бокала 125&nbsp;мл — 149,89 ₽.</div>
 <div class="calc-ui calc" data-price="899.34" data-key="estates">
 <div class="calc-wrap"><div>
 <div class="cwine"><img data-from="8" alt="" decoding="async"><div><h3>Abrau Estates Резерв Каберне Фран 2023</h3><p>Тихое красное · сухое · ЗГУ</p></div></div>
 <div class="cgrid">
-<div class="ccard">
-<table class="ctab"><thead><tr><th>Условие</th><th>Закупка / бут.</th><th class="r">Себест. / бокал <span class="num"><span data-o="vol">120</span>&nbsp;мл</span></th></tr></thead>
+<div class="ccard cin-card">
+<table class="ctab"><thead><tr><th>Условие</th><th>Закупка / бут.</th><th class="r">Себест. / бокал 125&nbsp;мл</th></tr></thead>
 <tbody>
-<tr class="t-price"><td class="lab">Текущий прайс</td><td class="big num" data-h="Закупка / бут.">899,34 ₽</td><td class="r big num" data-h="Себест. / бокал" data-o="cost"></td></tr>
-<tr class="t-vol"><td class="lab">Объём бокала</td><td colspan="2"><div class="chips" role="group" aria-label="Объём бокала"><button type="button" data-v="100">100 мл</button><button type="button" data-v="120">120 мл</button><button type="button" data-v="125">125 мл</button><button type="button" data-v="150">150 мл</button></div><div class="hint" data-o="gl" style="margin-top:5px"></div></td></tr>
+<tr class="t-price"><td class="lab">Текущий прайс</td><td class="big num" data-h="Закупка / бут.">899,34 ₽</td><td class="r big num" data-h="Себест. / бокал 125 мл" data-o="cost">149,89 ₽</td></tr>
 <tr class="t-in"><td class="lab">Цена бокала в карте, ₽<small>на выбор — можно установить</small></td><td class="cin"><div class="stp"><button type="button" data-f="menu" data-step="-50" aria-label="Уменьшить: Цена бокала в карте, рублей">−</button><div class="in"><input data-in="menu" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" enterkeyhint="done" aria-label="Цена бокала в карте, рублей"><span class="u">₽</span></div><button type="button" data-f="menu" data-step="50" aria-label="Увеличить: Цена бокала в карте, рублей">+</button></div></td><td class="r"><button type="button" class="hint lnkb" data-o="reset" hidden style="border:0;background:none;padding:0;text-decoration:underline;cursor:pointer">сбросить</button></td></tr>
 <tr class="t-kost"><td class="lab">Кост, %<small>считает калькулятор</small></td><td class="big num" data-o="kost"></td><td class="r hint">себест. бокала / цена в карте</td></tr>
-<tr class="t-in"><td class="lab">Сценарий продаж 1<small>кол-во бут. в мес.</small></td><td class="cin"><div class="stp"><button type="button" data-f="b1" data-step="-1" aria-label="Уменьшить: Сценарий 1, бутылок в месяц">−</button><div class="in"><input data-in="b1" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" enterkeyhint="done" aria-label="Сценарий 1, бутылок в месяц"><span class="u">бут.</span></div><button type="button" data-f="b1" data-step="1" aria-label="Увеличить: Сценарий 1, бутылок в месяц">+</button></div></td><td class="r hint num" data-o="g1"></td></tr>
-<tr class="t-in"><td class="lab">Сценарий продаж 2<small>кол-во бут. в мес.</small></td><td class="cin"><div class="stp"><button type="button" data-f="b2" data-step="-1" aria-label="Уменьшить: Сценарий 2, бутылок в месяц">−</button><div class="in"><input data-in="b2" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" enterkeyhint="done" aria-label="Сценарий 2, бутылок в месяц"><span class="u">бут.</span></div><button type="button" data-f="b2" data-step="1" aria-label="Увеличить: Сценарий 2, бутылок в месяц">+</button></div></td><td class="r hint num" data-o="g2"></td></tr>
 </tbody></table>
 </div>
 <div class="ccard cres">
-<div class="kpis"><div class="kpi hl"><span>Прибыль с бокала</span><b class="num" data-o="gp"></b><small>цена в карте − себестоимость</small></div><div class="kpi"><span>Прибыль с бутылки</span><b class="num" data-o="gpb"></b><small data-o="gpbs">6 бокалов</small></div></div>
-<table class="etab"><caption>Сценарий экономики винной карты</caption>
-<thead><tr><th>в месяц</th><th>Сценарий 1</th><th>Сценарий 2</th></tr></thead>
+<table class="etab econ"><caption>Экономика при цене бокала <span class="num" data-o="m"></span></caption>
 <tbody>
-<tr><td>Бутылок</td><td class="num" data-e="b1"></td><td class="num" data-e="b2"></td></tr>
-<tr><td>Бокалов</td><td class="num" data-e="gl1"></td><td class="num" data-e="gl2"></td></tr>
-<tr><td>Выручка по карте</td><td class="num" data-e="rev1"></td><td class="num" data-e="rev2"></td></tr>
-<tr><td>Закупка по прайсу</td><td class="num" data-e="buy1"></td><td class="num" data-e="buy2"></td></tr>
-<tr class="gp"><td>Валовая прибыль</td><td class="num" data-e="gp1"></td><td class="num" data-e="gp2"></td></tr>
-<tr class="yr"><td>То же за 12 месяцев</td><td class="num" data-e="yr1"></td><td class="num" data-e="yr2"></td></tr>
+<tr><td>Бокалов из бутылки 0,75 л</td><td class="num">6</td></tr>
+<tr><td>Выручка с бутылки</td><td class="num" data-o="rev"></td></tr>
+<tr><td>Закупка бутылки по прайсу</td><td class="num">899,34 ₽</td></tr>
+<tr class="gp"><td>Валовая прибыль с бутылки</td><td class="num" data-o="gpb"></td></tr>
+<tr class="gp2"><td>Валовая прибыль с бокала</td><td class="num" data-o="gp"></td></tr>
 </tbody></table>
 <p class="cnote"><b>Формула:</b> цена закупки бутылки / количество бокалов. Пример без учёта потерь, сервиса и прочих расходов ресторана.</p>
 </div>
 </div>
-<div class="mini" aria-hidden="true"><div>Себест. бокала<b class="num" data-k="cost"></b></div><div>Кост<b class="num" data-k="kost"></b></div><div>Прибыль · сц.&nbsp;1<b class="num" data-k="gp"></b></div></div>
+<div class="mini" aria-hidden="true"><div>Себест. бокала<b class="num" data-k="cost"></b></div><div>Кост<b class="num" data-k="kost"></b></div><div>Прибыль с бутылки<b class="num" data-k="gpb"></b></div></div>
 </div>
 <aside class="cside"><img data-from="8" alt="Abrau Estates Резерв Каберне Фран 2023" decoding="async"><h3>Abrau Estates Резерв Каберне Фран 2023</h3><p class="num">Прайс 899,34 ₽</p></aside>
 </div></div></div><div class="foot"><span>ABRAU PREMIUM</span><span class="num">13</span></div></div></section><section class="slide s-wine" aria-roledescription="слайд" aria-label="14 из 18: Ведерниковъ Резерв Красностоп Золотовский"><div class="slide-inner"><div class="pad"><div class="wine">
@@ -825,84 +821,49 @@ img{display:block;max-width:100%}
     if (srcImg) im.src = srcImg.getAttribute('src');
   });
 
-  /* ======================= GLASS CALCULATORS ======================= */
-  var BOTTLE = 750;
+  /* ======================= GLASS CALCULATORS (125 ml, 6 glasses per bottle; the user sets the glass price) ======================= */
+  var GLASSES = 6;
   var nf0 = new Intl.NumberFormat('ru-RU', { maximumFractionDigits: 0 });
   var nf1 = new Intl.NumberFormat('ru-RU', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
-  var nf2 = new Intl.NumberFormat('ru-RU', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   var NB = ' ';
   function r0(n) { return nf0.format(Math.round(n)) + NB + '₽'; }
-  function r2(n) { return nf2.format(n) + NB + '₽'; }
+  function r2(n) { return new Intl.NumberFormat('ru-RU', { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(n) + NB + '₽'; }
   function digits(v) { var s = String(v).replace(/[^\d]/g, ''); return s === '' ? null : parseInt(s, 10); }
-  function plural(n, a, b, c) { n = Math.abs(n) % 100; var n1 = n % 10; if (n > 10 && n < 20) return c; if (n1 > 1 && n1 < 5) return b; if (n1 === 1) return a; return c; }
 
   each(document.querySelectorAll('.calc'), function (C) {
-    var price = parseFloat(C.getAttribute('data-price'));  // bottle price, rub, exact (kopecks)
-    var S = { vol: 120, menu: null, b1: 10, b2: 20 };
+    var price = parseFloat(C.getAttribute('data-price'));   // bottle price, exact kopecks
+    var cost = price / GLASSES;
+    var S = { menu: null };
     function q(s) { return C.querySelector(s); }
-    function glasses() { return Math.floor(BOTTLE / S.vol); }
-    function cost() { return price / glasses(); }
-    function defMenu() { return Math.ceil(cost() / 0.25 / 50) * 50; }   // ~25% cost, rounded up to 50 ₽
+    function defMenu() { return Math.ceil(cost / 0.25 / 50) * 50; }   // start value ≈ 25 % cost, rounded up to 50 ₽
     function menu() { return S.menu != null ? S.menu : defMenu(); }
-    var inMenu = q('[data-in=menu]'), inB1 = q('[data-in=b1]'), inB2 = q('[data-in=b2]');
-    var sub = C.closest('.slide').querySelector('[data-sub]');
+    var inMenu = q('[data-in=menu]');
 
     function render(from) {
-      var g = glasses(), c = cost(), m = menu(), rest = BOTTLE - g * S.vol;
-      if (sub) sub.textContent = 'Иллюстративный расчёт для ' + S.vol + NB + 'мл, ' + g + NB + plural(g, 'бокал', 'бокала', 'бокалов') + ' из бутылки 0,75' + NB + 'л';
-      each(C.querySelectorAll('.chips button'), function (b) { b.setAttribute('aria-pressed', String(+b.getAttribute('data-v') === S.vol)); });
-      q('[data-o=vol]').textContent = S.vol;
-      q('[data-o=cost]').textContent = r2(c);
-      q('[data-o=gl]').textContent = g + NB + plural(g, 'бокал', 'бокала', 'бокалов') + ' из бутылки' + (rest ? ' · остаток ' + rest + NB + 'мл не учтён' : '');
-      if (from !== 'menu') inMenu.value = m ? nf0.format(m) : '';
-      if (from !== 'b1') inB1.value = S.b1;
-      if (from !== 'b2') inB2.value = S.b2;
+      var m = menu(), has = m > 0, gp = m - cost, gpb = m * GLASSES - price, neg = has && gp < 0;
+      if (from !== 'menu') inMenu.value = has ? nf0.format(m) : '';
       q('[data-o=reset]').hidden = S.menu == null;
-      var kost = m > 0 ? c / m : NaN;
-      var ktxt = isFinite(kost) ? nf1.format(kost * 100).replace(/,0$/, '') + NB + '%' : '—';
+      var ktxt = has ? nf1.format(cost / m * 100).replace(/,0$/, '') + NB + '%' : '—';
+      q('[data-o=cost]').textContent = r2(cost);
       q('[data-o=kost]').textContent = ktxt;
-      q('[data-o=gp]').textContent = m > 0 ? r0(m - c) : '—';
-      q('[data-o=gp]').classList.toggle('neg', m > 0 && m < c);
-      q('[data-o=gpb]').textContent = m > 0 ? r0(m * g - price) : '—';
-      q('[data-o=gpb]').classList.toggle('neg', m > 0 && m * g < price);
-      q('[data-o=gpbs]').textContent = 'за ' + g + NB + plural(g, 'бокал', 'бокала', 'бокалов') + ' из бутылки';
-      q('[data-o=kost]').classList.toggle('neg', m > 0 && m < c);
-      [['1', S.b1], ['2', S.b2]].forEach(function (a) {
-        var n = a[0], b = a[1], gl = b * g, rev = gl * m, buy = b * price, gp = rev - buy;
-        q('[data-o=g' + n + ']').textContent = '= ' + nf0.format(gl) + NB + plural(gl, 'бокал', 'бокала', 'бокалов') + ' в месяц';
-        q('[data-e=b' + n + ']').textContent = nf0.format(b);
-        q('[data-e=gl' + n + ']').textContent = nf0.format(gl);
-        q('[data-e=rev' + n + ']').textContent = r0(rev);
-        q('[data-e=buy' + n + ']').textContent = r0(buy);
-        var e1 = q('[data-e=gp' + n + ']'); e1.textContent = r0(gp); e1.classList.toggle('neg', gp < 0);
-        q('[data-e=yr' + n + ']').textContent = r0(gp * 12);
-      });
-      q('[data-k=cost]').textContent = r2(c);
+      q('[data-o=kost]').classList.toggle('neg', neg);
+      q('[data-o=m]').textContent = has ? r0(m) : '—';
+      q('[data-o=rev]').textContent = has ? r0(m * GLASSES) : '—';
+      q('[data-o=gpb]').textContent = has ? r0(gpb) : '—';
+      q('[data-o=gp]').textContent = has ? r0(gp) : '—';
+      q('[data-o=gpb]').classList.toggle('neg', neg);
+      q('[data-o=gp]').classList.toggle('neg', neg);
+      q('[data-k=cost]').textContent = r2(cost);
       q('[data-k=kost]').textContent = ktxt;
-      q('[data-k=gp]').textContent = r0(S.b1 * g * m - S.b1 * price);
+      q('[data-k=gpb]').textContent = has ? r0(gpb) : '—';
     }
-
-    each(C.querySelectorAll('.chips button'), function (b) {
-      b.addEventListener('click', function () { S.vol = +b.getAttribute('data-v'); render(); });
-    });
     each(C.querySelectorAll('[data-step]'), function (b) {
-      b.addEventListener('click', function () {
-        var f = b.getAttribute('data-f'), d = +b.getAttribute('data-step');
-        if (f === 'menu') S.menu = Math.max(0, Math.round((menu() + d) / 10) * 10);
-        if (f === 'b1') S.b1 = Math.min(9999, Math.max(0, S.b1 + d));
-        if (f === 'b2') S.b2 = Math.min(9999, Math.max(0, S.b2 + d));
-        render();
-      });
+      b.addEventListener('click', function () { S.menu = Math.max(0, Math.round((menu() + +b.getAttribute('data-step')) / 10) * 10); render(); });
     });
     inMenu.addEventListener('input', function () { var v = digits(inMenu.value); S.menu = v == null ? 0 : Math.min(v, 999999); render('menu'); });
-    inB1.addEventListener('input', function () { var v = digits(inB1.value); S.b1 = v == null ? 0 : Math.min(v, 9999); render('b1'); });
-    inB2.addEventListener('input', function () { var v = digits(inB2.value); S.b2 = v == null ? 0 : Math.min(v, 9999); render('b2'); });
-    [inMenu, inB1, inB2].forEach(function (inp) {
-      inp.addEventListener('blur', function () { render(); });
-      inp.addEventListener('focus', function () { setTimeout(function () { try { inp.select(); } catch (e) { } }, 0); });
-    });
+    inMenu.addEventListener('blur', function () { render(); });
+    inMenu.addEventListener('focus', function () { setTimeout(function () { try { inMenu.select(); } catch (e) { } }, 0); });
     q('[data-o=reset]').addEventListener('click', function () { S.menu = null; render(); });
-
     if ('IntersectionObserver' in window) {
       var mini = C.querySelector('.mini');
       new IntersectionObserver(function (es) { mini.classList.toggle('off', es[0].isIntersecting); }, { threshold: 0.4 }).observe(C.querySelector('.cres'));
